@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    {%include 'navbar.html'%}
+    <h1>Welcome to the Main Page</h1>
+
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'all-log' %}">All Logs</a></li>
+        <li><a href="{% url 'add-log' %}">Add Log</a></li>
+        <li><a href="{% url 'user-list' %}">User List</a></li>
+        <li><a href="{% url 'company-list' %}">Company List</a></li>
+        <li><a href="{% url 'device-list' %}">Device List</a></li>
+        <li><a href="{% url 'device-history-list' %}">Device History List</a></li>
+    </ul>
+</body>
+
+</html>
